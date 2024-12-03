@@ -1,3 +1,5 @@
 ninja_dyndep_version = 1.0
-build CMakeFiles/AoC2024.dir/day2.cpp.o: dyndep
+build CMakeFiles/AoC2024.dir/utils.cpp.o: dyndep
+
+build CMakeFiles/AoC2024.dir/day3.cpp.o: dyndep
 
