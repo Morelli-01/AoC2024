@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(AoC2024
         utils.cpp
         utils.h
-        day3.cpp)
+        day4.cpp)
