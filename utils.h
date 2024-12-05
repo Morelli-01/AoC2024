@@ -15,6 +15,7 @@
 #include "cmath"
 #include "map"
 #include "chrono"
+#include "algorithm"
 
 using namespace std;
 using namespace chrono;

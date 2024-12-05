@@ -1,5 +1,5 @@
-CMakeFiles/AoC2024.dir/utils.cpp.o.ddi: \
- /home/nicola/Desktop/AoC2024/utils.cpp /usr/include/stdc-predef.h \
+CMakeFiles/AoC2024.dir/day5.cpp.o.ddi: \
+ /home/nicola/Desktop/AoC2024/day5.cpp /usr/include/stdc-predef.h \
  /home/nicola/Desktop/AoC2024/utils.h /usr/include/c++/14/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \

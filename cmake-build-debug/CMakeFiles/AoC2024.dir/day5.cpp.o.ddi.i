@@ -1,10 +1,11 @@
-# 0 "/home/nicola/Desktop/AoC2024/utils.cpp"
+# 0 "/home/nicola/Desktop/AoC2024/day5.cpp"
 # 1 "/home/nicola/Desktop/AoC2024/cmake-build-debug//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
-# 1 "/home/nicola/Desktop/AoC2024/utils.cpp"
+# 1 "/home/nicola/Desktop/AoC2024/day5.cpp"
+
 
 
 
@@ -110955,38 +110956,153 @@ lexicographical_compare(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _
 # 20 "/home/nicola/Desktop/AoC2024/utils.h"
 using namespace std;
 using namespace chrono;
-# 6 "/home/nicola/Desktop/AoC2024/utils.cpp" 2
+# 7 "/home/nicola/Desktop/AoC2024/day5.cpp" 2
 
+bool is_sequence_good(map<size_t, vector<size_t>> &rules, vector<size_t> &sequence) {
+    for (int i = 1; i < sequence.size(); ++i) {
+        auto v = sequence[i];
+        if (rules.contains(v)) {
+            auto rule = rules[v];
+            for (int j = 0; j < i; ++j) {
+                if (ranges::contains(rule, sequence[j]))
+                    return false;
 
-struct Timer
-{
-    time_point<steady_clock> start_ = steady_clock::now();
-    time_point<steady_clock> stop_ = steady_clock::now();
-    string task_name_;
+            }
+        }
 
-public:
-    explicit Timer(string task_name) : task_name_(task_name) {}
-
-    void start()
-    {
-        start_ = steady_clock::now();
     }
-    void start(string task_name)
-    {
-        task_name_ = task_name;
-        start_ = steady_clock::now();
+    return true;
+}
+
+bool is_sequence_good_or_fix(map<size_t, vector<size_t>> &rules, vector<size_t> &sequence) {
+    bool flag = true;
+    start:
+    for (int i = 1; i < sequence.size(); ++i) {
+        auto v = sequence[i];
+        if (rules.contains(v)) {
+            auto rule = rules[v];
+            for (int j = 0; j < i; ++j) {
+                if (ranges::contains(rule, sequence[j])) {
+                    sequence[i] = sequence[j];
+                    sequence[j] = v;
+                    flag = false;
+                    goto start;
+                }
+            }
+        }
+
     }
-    void stop()
-    {
-        stop_ = steady_clock::now();
-        duration<double> elapsed_ms = stop_ - start_;
-        cout << "Elapsed time for " << task_name_ << ": " << (elapsed_ms.count()) << " sec" << endl;
+    return flag;
+}
+
+void riddle5_1(string file_name) {
+
+    ifstream is(file_name);
+    map<size_t, vector<size_t>> rules;
+    char tmpC;
+    string tmpStr = "";
+    while ((tmpC = is.get()) != '\n') {
+        string key = to_string(tmpC - 48), value = "";
+        while ((tmpC = is.get()) != '|')key += tmpC;
+        while ((tmpC = is.get()) != '\n')value += tmpC;
+
+        if (rules.contains(stoi(key))) {
+            rules[stoi(key)].push_back(stoi(value));
+        } else {
+            rules[stoi(key)] = vector<size_t>{(size_t) stoi(value)};
+        }
+        key.clear();
+        value.clear();
     }
 
-    void stop_flops(float flops)
-    {
-        stop_ = steady_clock::now();
-        duration<double> elapsed_ms = stop_ - start_;
-        cout << "Elapsed time for " << task_name_ << ": " << (elapsed_ms.count()) << " sec" << "    " << flops / elapsed_ms.count() << " GFLOPS" << endl;
+    vector<vector<size_t>> sequencies{};
+
+    while (is.good() and (tmpC = is.get()) != 
+# 67 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+                                             (-1)
+# 67 "/home/nicola/Desktop/AoC2024/day5.cpp"
+                                                ) {
+        tmpStr.clear();
+        vector<size_t> tmpV{};
+        tmpStr += tmpC;
+
+        while (is.peek() != '\n' and is.good()) {
+            tmpC = is.get();
+            if (tmpC == ',') {
+                tmpV.push_back(stoi(tmpStr));
+                tmpStr.clear();
+            } else tmpStr += tmpC;
+        }
+        tmpV.push_back(stoi(tmpStr));
+        if (is_sequence_good(rules, tmpV))
+            sequencies.push_back(tmpV);
     }
-};
+    size_t solution = 0;
+    for (auto &s: sequencies) {
+        auto middle_idx = floor(s.size() / 2);
+        solution += s[middle_idx];
+    }
+    cout << "The solution of riddle5_1 is: " << solution << endl;
+}
+
+void riddle5_2(string file_name) {
+
+    ifstream is(file_name);
+    map<size_t, vector<size_t>> rules;
+    char tmpC;
+    string tmpStr = "";
+    while ((tmpC = is.get()) != '\n') {
+        string key = to_string(tmpC - 48), value = "";
+        while ((tmpC = is.get()) != '|')key += tmpC;
+        while ((tmpC = is.get()) != '\n')value += tmpC;
+
+        if (rules.contains(stoi(key))) {
+            rules[stoi(key)].push_back(stoi(value));
+        } else {
+            rules[stoi(key)] = vector<size_t>{(size_t) stoi(value)};
+        }
+        key.clear();
+        value.clear();
+    }
+
+    vector<vector<size_t>> sequencies{};
+    vector<vector<size_t>> bad_sequencies{};
+
+    while (is.good() and (tmpC = is.get()) != 
+# 114 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+                                             (-1)
+# 114 "/home/nicola/Desktop/AoC2024/day5.cpp"
+                                                ) {
+        tmpStr.clear();
+        vector<size_t> tmpV{};
+        tmpStr += tmpC;
+
+        while (is.peek() != '\n' and is.good()) {
+            tmpC = is.get();
+            if (tmpC == ',') {
+                tmpV.push_back(stoi(tmpStr));
+                tmpStr.clear();
+            } else tmpStr += tmpC;
+        }
+        tmpV.push_back(stoi(tmpStr));
+        if (is_sequence_good_or_fix(rules, tmpV))
+            sequencies.push_back(tmpV);
+        else bad_sequencies.push_back(tmpV);
+    }
+    size_t solution = 0;
+    for (auto &s: bad_sequencies) {
+        auto middle_idx = floor(s.size() / 2);
+        solution += s[middle_idx];
+    }
+    cout << "The solution of riddle5_2 is: " << solution << endl;
+}
+
+int main(void) {
+    riddle5_1("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
+    riddle5_2("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
+    return 
+# 142 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+          0
+# 142 "/home/nicola/Desktop/AoC2024/day5.cpp"
+                      ;
+}
