@@ -544,3 +544,732 @@ events:
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.43.1
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eunjTk"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eunjTk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eunjTk'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_c3433
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_c3433.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eunjTk/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_c3433.dir/test_mpi.c.o -o cmTC_c3433  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-J4OWPg"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-J4OWPg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-J4OWPg'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_7a2f4
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_7a2f4.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-J4OWPg/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_7a2f4.dir/test_mpi.cpp.o -o cmTC_7a2f4  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-SKGUhY"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-SKGUhY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-SKGUhY'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_37660
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_37660.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-SKGUhY/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_37660.dir/test_mpi.cpp.o -o cmTC_37660  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vaQmgs"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vaQmgs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vaQmgs'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_acbb2
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_acbb2.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vaQmgs/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_acbb2.dir/test_mpi.c.o -o cmTC_acbb2  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4I3pRQ"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4I3pRQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4I3pRQ'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_56909
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_56909.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4I3pRQ/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_56909.dir/test_mpi.cpp.o -o cmTC_56909  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vlHQQG"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vlHQQG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vlHQQG'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_2b509
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_2b509.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vlHQQG/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_2b509.dir/test_mpi.cpp.o -o cmTC_2b509  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2oxrNb"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2oxrNb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2oxrNb'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_0f506
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_0f506.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2oxrNb/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_0f506.dir/test_mpi.c.o -o cmTC_0f506  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cj4Sta"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cj4Sta"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cj4Sta'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_bc85e
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_bc85e.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cj4Sta/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_bc85e.dir/test_mpi.cpp.o -o cmTC_bc85e  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OCsTu9"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OCsTu9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OCsTu9'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_42f0d
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_42f0d.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OCsTu9/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_42f0d.dir/test_mpi.cpp.o -o cmTC_42f0d  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CTO9KT"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CTO9KT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CTO9KT'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_7f223
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_7f223.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-CTO9KT/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_7f223.dir/test_mpi.c.o -o cmTC_7f223  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LmZvBY"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LmZvBY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LmZvBY'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_7adf3
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_7adf3.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-LmZvBY/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_7adf3.dir/test_mpi.cpp.o -o cmTC_7adf3  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qzWqqP"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qzWqqP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qzWqqP'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_0fa32
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_0fa32.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qzWqqP/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_0fa32.dir/test_mpi.cpp.o -o cmTC_0fa32  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JLxt5q"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JLxt5q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JLxt5q'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_d0492
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_d0492.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-JLxt5q/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_d0492.dir/test_mpi.c.o -o cmTC_d0492  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YKosVM"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YKosVM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YKosVM'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_ca7b1
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_ca7b1.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-YKosVM/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_ca7b1.dir/test_mpi.cpp.o -o cmTC_ca7b1  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GAW4lE"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GAW4lE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GAW4lE'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_8fb55
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_8fb55.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-GAW4lE/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_8fb55.dir/test_mpi.cpp.o -o cmTC_8fb55  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wNuMOo"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wNuMOo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wNuMOo'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_f3311
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_f3311.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wNuMOo/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_f3311.dir/test_mpi.c.o -o cmTC_f3311  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mEPeqg"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mEPeqg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mEPeqg'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_6acad
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_6acad.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mEPeqg/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_6acad.dir/test_mpi.cpp.o -o cmTC_6acad  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DUmk5A"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DUmk5A"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DUmk5A'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_8b6b6
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_8b6b6.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-DUmk5A/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_8b6b6.dir/test_mpi.cpp.o -o cmTC_8b6b6  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h4H2GB"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h4H2GB"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h4H2GB'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_d52ce
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_d52ce.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-h4H2GB/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_d52ce.dir/test_mpi.c.o -o cmTC_d52ce  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XNxCgJ"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XNxCgJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XNxCgJ'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_3678e
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_3678e.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XNxCgJ/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_3678e.dir/test_mpi.cpp.o -o cmTC_3678e  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XkR9gr"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XkR9gr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XkR9gr'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_a1425
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_a1425.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-XkR9gr/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_a1425.dir/test_mpi.cpp.o -o cmTC_a1425  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-NXI2nz"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-NXI2nz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-NXI2nz'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_fd8a4
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_fd8a4.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-NXI2nz/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_fd8a4.dir/test_mpi.c.o -o cmTC_fd8a4  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwqVA7"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwqVA7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwqVA7'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_699c0
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_699c0.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwqVA7/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_699c0.dir/test_mpi.cpp.o -o cmTC_699c0  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eCI3n1"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eCI3n1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eCI3n1'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_5e069
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_5e069.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-eCI3n1/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_5e069.dir/test_mpi.cpp.o -o cmTC_5e069  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AvMKmk"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AvMKmk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AvMKmk'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_c915f
+        [1/2] /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_c915f.dir/test_mpi.c.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-AvMKmk/test_mpi.c
+        [2/2] : && /usr/bin/cc  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_c915f.dir/test_mpi.c.o -o cmTC_c915f  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1326 (_MPI_try_staged_settings)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1649 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Owut9H"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Owut9H"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Owut9H'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_a89b4
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_a89b4.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-Owut9H/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_a89b4.dir/test_mpi.cpp.o -o cmTC_a89b4  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1282 (try_compile)"
+      - "/snap/clion/305/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindMPI.cmake:1676 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OSC3x6"
+      binary: "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OSC3x6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OSC3x6'
+        
+        Run Build Command(s): /snap/clion/305/bin/ninja/linux/x64/ninja -v cmTC_1b791
+        [1/2] /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/mpich/include -fdiagnostics-color=always -flto=auto -ffat-lto-objects -o CMakeFiles/cmTC_1b791.dir/test_mpi.cpp.o -c /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-OSC3x6/test_mpi.cpp
+        [2/2] : && /usr/bin/c++  -Wl,-Bsymbolic-functions CMakeFiles/cmTC_1b791.dir/test_mpi.cpp.o -o cmTC_1b791  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/mpich/lib  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpichcxx.so  /usr/lib/x86_64-linux-gnu/mpich/lib/libmpich.so && :
+        
+      exitCode: 0
+...

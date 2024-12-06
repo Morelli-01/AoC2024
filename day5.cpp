@@ -13,7 +13,6 @@ bool is_sequence_good(map<size_t, vector<size_t>> &rules, vector<size_t> &sequen
             for (int j = 0; j < i; ++j) {
                 if (ranges::contains(rule, sequence[j]))
                     return false;
-
             }
         }
 
@@ -63,23 +62,22 @@ void riddle5_1(string file_name) {
     }
 
     vector<vector<size_t>> sequencies{};
+        while (is.good() and (tmpC = is.get()) != EOF) {
+            tmpStr.clear();
+            vector<size_t> tmpV{};
+            tmpStr += tmpC;
 
-    while (is.good() and (tmpC = is.get()) != EOF) {
-        tmpStr.clear();
-        vector<size_t> tmpV{};
-        tmpStr += tmpC;
-
-        while (is.peek() != '\n' and is.good()) {
-            tmpC = is.get();
-            if (tmpC == ',') {
-                tmpV.push_back(stoi(tmpStr));
-                tmpStr.clear();
-            } else tmpStr += tmpC;
+            while (is.peek() != '\n' and is.good()) {
+                tmpC = is.get();
+                if (tmpC == ',') {
+                    tmpV.push_back(stoi(tmpStr));
+                    tmpStr.clear();
+                } else tmpStr += tmpC;
+            }
+            tmpV.push_back(stoi(tmpStr));
+            if (is_sequence_good(rules, tmpV))
+                sequencies.push_back(tmpV);
         }
-        tmpV.push_back(stoi(tmpStr));
-        if (is_sequence_good(rules, tmpV))
-            sequencies.push_back(tmpV);
-    }
     size_t solution = 0;
     for (auto &s: sequencies) {
         auto middle_idx = floor(s.size() / 2);
@@ -137,6 +135,7 @@ void riddle5_2(string file_name) {
 }
 
 int main(void) {
+
     riddle5_1("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
     riddle5_2("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
     return EXIT_SUCCESS;

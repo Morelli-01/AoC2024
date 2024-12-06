@@ -110956,9 +110956,55 @@ lexicographical_compare(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _
 # 20 "/home/nicola/Desktop/AoC2024/utils.h"
 using namespace std;
 using namespace chrono;
+
+struct Timer {
+    time_point<steady_clock> start_ = steady_clock::now();
+    time_point<steady_clock> stop_ = steady_clock::now();
+    string task_name_;
+
+    Timer(string task_name);
+    void start();
+    void start(string task_name);
+    void stop();
+    void stop_flops(float flops);
+};
+template<typename T>
+struct Mat {
+    size_t cols_;
+    size_t rows_;
+    vector<T> data_;
+
+    Mat(size_t rows, size_t cols) : rows_(rows), cols_(cols) {
+        data_ = vector<T>(rows * cols);
+    }
+
+    T &operator[](size_t r, size_t c) {
+        return data_[r * cols_ + c];
+    }
+
+    const T &operator[](size_t r, size_t c) const {
+        return data_[r * cols_ + c];
+    }
+
+    auto ptr() {
+        return data_.data();
+    }
+
+    void print() {
+        cout << "[" << rows_ << "," << cols_ << "]\n";
+        for (int r = 0; r < rows_; ++r) {
+            for (int c = 0; c < cols_; ++c) {
+                cout << data_[r * cols_ + c] << ", ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+};
 # 7 "/home/nicola/Desktop/AoC2024/day5.cpp" 2
 
 bool is_sequence_good(map<size_t, vector<size_t>> &rules, vector<size_t> &sequence) {
+    bool flag = true;
     for (int i = 1; i < sequence.size(); ++i) {
         auto v = sequence[i];
         if (rules.contains(v)) {
@@ -110966,7 +111012,6 @@ bool is_sequence_good(map<size_t, vector<size_t>> &rules, vector<size_t> &sequen
             for (int j = 0; j < i; ++j) {
                 if (ranges::contains(rule, sequence[j]))
                     return false;
-
             }
         }
 
@@ -111016,27 +111061,29 @@ void riddle5_1(string file_name) {
     }
 
     vector<vector<size_t>> sequencies{};
+#pragma omp parallel master
+    {
+        while (is.good() and (tmpC = is.get()) != 
+# 68 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+                                                 (-1)
+# 68 "/home/nicola/Desktop/AoC2024/day5.cpp"
+                                                    ) {
+            tmpStr.clear();
+            vector<size_t> tmpV{};
+            tmpStr += tmpC;
 
-    while (is.good() and (tmpC = is.get()) != 
-# 67 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
-                                             (-1)
-# 67 "/home/nicola/Desktop/AoC2024/day5.cpp"
-                                                ) {
-        tmpStr.clear();
-        vector<size_t> tmpV{};
-        tmpStr += tmpC;
-
-        while (is.peek() != '\n' and is.good()) {
-            tmpC = is.get();
-            if (tmpC == ',') {
-                tmpV.push_back(stoi(tmpStr));
-                tmpStr.clear();
-            } else tmpStr += tmpC;
+            while (is.peek() != '\n' and is.good()) {
+                tmpC = is.get();
+                if (tmpC == ',') {
+                    tmpV.push_back(stoi(tmpStr));
+                    tmpStr.clear();
+                } else tmpStr += tmpC;
+            }
+            tmpV.push_back(stoi(tmpStr));
+            if (is_sequence_good(rules, tmpV))
+                sequencies.push_back(tmpV);
         }
-        tmpV.push_back(stoi(tmpStr));
-        if (is_sequence_good(rules, tmpV))
-            sequencies.push_back(tmpV);
-    }
+    };
     size_t solution = 0;
     for (auto &s: sequencies) {
         auto middle_idx = floor(s.size() / 2);
@@ -111069,9 +111116,9 @@ void riddle5_2(string file_name) {
     vector<vector<size_t>> bad_sequencies{};
 
     while (is.good() and (tmpC = is.get()) != 
-# 114 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+# 116 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
                                              (-1)
-# 114 "/home/nicola/Desktop/AoC2024/day5.cpp"
+# 116 "/home/nicola/Desktop/AoC2024/day5.cpp"
                                                 ) {
         tmpStr.clear();
         vector<size_t> tmpV{};
@@ -111098,11 +111145,15 @@ void riddle5_2(string file_name) {
 }
 
 int main(void) {
+
+    Timer t("riddle5_1");
+    t.start();
     riddle5_1("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
-    riddle5_2("/home/nicola/Desktop/AoC2024/input_files/day5_1.txt");
+    t.stop();
+
     return 
-# 142 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
+# 148 "/home/nicola/Desktop/AoC2024/day5.cpp" 3 4
           0
-# 142 "/home/nicola/Desktop/AoC2024/day5.cpp"
+# 148 "/home/nicola/Desktop/AoC2024/day5.cpp"
                       ;
 }
