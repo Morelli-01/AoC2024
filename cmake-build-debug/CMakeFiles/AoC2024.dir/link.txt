@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -g CMakeFiles/AoC2024.dir/utils.cpp.o CMakeFiles/AoC2024.dir/day6.cpp.o -o AoC2024

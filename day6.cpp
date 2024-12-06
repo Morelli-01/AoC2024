@@ -35,6 +35,8 @@ bool move(Mat<uint8_t> &puzzle, pair<size_t, size_t> &prev_pos) {
 
 bool move_2(Mat<uint8_t> &puzzle, pair<size_t, size_t> &prev_pos, uint8_t &prev_char, vector<crd> &possible_locations) {
     uint8_t guard = puzzle[prev_pos.first, prev_pos.second];
+    possible_locations.push_back(prev_pos);
+
     puzzle[prev_pos.first, prev_pos.second] = 'X';
     if (prev_char == '.')
         puzzle[prev_pos.first, prev_pos.second] = (guard == '^' or guard == 'v') ? '|' : '-';
@@ -59,24 +61,26 @@ bool move_2(Mat<uint8_t> &puzzle, pair<size_t, size_t> &prev_pos, uint8_t &prev_
             else if (guard == 'v') guard = '<';
             else if (guard == '<') guard = '^';
             puzzle[prev_pos.first, prev_pos.second] = '+';
+//            possible_locations.push_back(prev_pos);
         }
     }
-    if (puzzle[prev_pos.first - guard_dir.first, prev_pos.second - guard_dir.second] == '+')
-        possible_locations.push_back(prev_pos);
+//    if (puzzle[prev_pos.first - guard_dir.first, prev_pos.second - guard_dir.second] == '+')
+//        possible_locations.push_back(prev_pos);
+
     return prev_pos.first <= puzzle.rows_ and prev_pos.second < puzzle.cols_;
 }
 
 bool check_loop(crd &pos_to_check, Mat<uint8_t> &&puzzle, size_t max_iter, crd start_pos) {
     puzzle[pos_to_check.first, pos_to_check.second] = 'O';
     size_t n_iters = 0;
-    puzzle.print();
+//    puzzle.print();
     puzzle[pos_to_check.first, pos_to_check.second] = '#';
 
     while (move(puzzle, start_pos)) {
 //        puzzle.print();
         n_iters++;
-        if (n_iters >= 2 * max_iter) {
-            puzzle.print();
+        if (n_iters >= 3 * max_iter) {
+//            puzzle.print();
             return true;
         }
     }
@@ -105,7 +109,7 @@ void riddle6_1(string file_name) {
     is.close();
     Mat<uint8_t> puzzle(rows, cols);
     puzzle.data_ = move(data);
-    puzzle.print();
+//    puzzle.print();
     while (move(puzzle, start_pos));
 //        puzzle.print();
 
@@ -147,21 +151,23 @@ void riddle6_2(string file_name) {
     while (move_2(puzzle, start_pos, prev_char, possibile_locations))
         move_cnt++;
 
-    for (const auto &item: possibile_locations){
-        initial_puzzle[item.first, item.second] = 'O';
+    for (int i = 0; i < possibile_locations.size(); ++i) {
+        auto item = possibile_locations[i];
+        if (item.first == start_pos2.first and item.second == start_pos2.second) {
+            possibile_locations.erase(possibile_locations.begin() + i);
+        }
     }
-    initial_puzzle.print();
 
-//    for (auto &item: possibile_locations) {
-//        if (check_loop(item, initial_puzzle.copy(), move_cnt, start_pos2)) {
-//            puzzle[item.first, item.second] = 'O';
+    for (auto &item: possibile_locations) {
+        if (check_loop(item, initial_puzzle.copy(), move_cnt, start_pos2)) {
+            puzzle[item.first, item.second] = 'O';
 //            cout << "Good loop\n";
-//        } else {
+        } else {
 //            cout << "Bad loop\n";
-//        }
-//    }
+        }
+    }
 
-    puzzle.print();
+//    puzzle.print();
     size_t cnt = 0;
     for (auto &e: puzzle.data_)
         if (e == 'O')cnt++;
