@@ -46,6 +46,10 @@ struct Mat {
         data_ = vector<T>(rows * cols);
     }
 
+    Mat(size_t rows, size_t cols, T fill_data) : rows_(rows), cols_(cols) {
+        data_ = vector<T>(rows * cols, fill_data);
+    }
+
     T &operator[](size_t r, size_t c) {
         return data_[r * cols_ + c];
     }
