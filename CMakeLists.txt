@@ -5,8 +5,8 @@ project(AoC2024)
 #include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
 set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")
@@ -14,6 +14,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 add_executable(AoC2024
         utils.cpp
         utils.h
-        day6.cpp)
+        day9.cpp)
 
 #target_link_libraries(AoC2024 ${MPI_C_LIBRARIES})

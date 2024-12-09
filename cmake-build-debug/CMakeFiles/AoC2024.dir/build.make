@@ -83,30 +83,30 @@ CMakeFiles/AoC2024.dir/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AoC2024.dir/utils.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/Desktop/AoC2024/utils.cpp -o CMakeFiles/AoC2024.dir/utils.cpp.s
 
-CMakeFiles/AoC2024.dir/day6.cpp.o: CMakeFiles/AoC2024.dir/flags.make
-CMakeFiles/AoC2024.dir/day6.cpp.o: /home/nicola/Desktop/AoC2024/day6.cpp
-CMakeFiles/AoC2024.dir/day6.cpp.o: CMakeFiles/AoC2024.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AoC2024.dir/day6.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AoC2024.dir/day6.cpp.o -MF CMakeFiles/AoC2024.dir/day6.cpp.o.d -o CMakeFiles/AoC2024.dir/day6.cpp.o -c /home/nicola/Desktop/AoC2024/day6.cpp
+CMakeFiles/AoC2024.dir/day9.cpp.o: CMakeFiles/AoC2024.dir/flags.make
+CMakeFiles/AoC2024.dir/day9.cpp.o: /home/nicola/Desktop/AoC2024/day9.cpp
+CMakeFiles/AoC2024.dir/day9.cpp.o: CMakeFiles/AoC2024.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AoC2024.dir/day9.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AoC2024.dir/day9.cpp.o -MF CMakeFiles/AoC2024.dir/day9.cpp.o.d -o CMakeFiles/AoC2024.dir/day9.cpp.o -c /home/nicola/Desktop/AoC2024/day9.cpp
 
-CMakeFiles/AoC2024.dir/day6.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AoC2024.dir/day6.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/Desktop/AoC2024/day6.cpp > CMakeFiles/AoC2024.dir/day6.cpp.i
+CMakeFiles/AoC2024.dir/day9.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AoC2024.dir/day9.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/Desktop/AoC2024/day9.cpp > CMakeFiles/AoC2024.dir/day9.cpp.i
 
-CMakeFiles/AoC2024.dir/day6.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AoC2024.dir/day6.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/Desktop/AoC2024/day6.cpp -o CMakeFiles/AoC2024.dir/day6.cpp.s
+CMakeFiles/AoC2024.dir/day9.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AoC2024.dir/day9.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/Desktop/AoC2024/day9.cpp -o CMakeFiles/AoC2024.dir/day9.cpp.s
 
 # Object files for target AoC2024
 AoC2024_OBJECTS = \
 "CMakeFiles/AoC2024.dir/utils.cpp.o" \
-"CMakeFiles/AoC2024.dir/day6.cpp.o"
+"CMakeFiles/AoC2024.dir/day9.cpp.o"
 
 # External object files for target AoC2024
 AoC2024_EXTERNAL_OBJECTS =
 
 AoC2024: CMakeFiles/AoC2024.dir/utils.cpp.o
-AoC2024: CMakeFiles/AoC2024.dir/day6.cpp.o
+AoC2024: CMakeFiles/AoC2024.dir/day9.cpp.o
 AoC2024: CMakeFiles/AoC2024.dir/build.make
 AoC2024: CMakeFiles/AoC2024.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AoC2024"

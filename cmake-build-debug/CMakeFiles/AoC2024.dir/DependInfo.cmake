@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nicola/Desktop/AoC2024/day6.cpp" "CMakeFiles/AoC2024.dir/day6.cpp.o" "gcc" "CMakeFiles/AoC2024.dir/day6.cpp.o.d"
+  "/home/nicola/Desktop/AoC2024/day9.cpp" "CMakeFiles/AoC2024.dir/day9.cpp.o" "gcc" "CMakeFiles/AoC2024.dir/day9.cpp.o.d"
   "/home/nicola/Desktop/AoC2024/utils.cpp" "CMakeFiles/AoC2024.dir/utils.cpp.o" "gcc" "CMakeFiles/AoC2024.dir/utils.cpp.o.d"
   )
 

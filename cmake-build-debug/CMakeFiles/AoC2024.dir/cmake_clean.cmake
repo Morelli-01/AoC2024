@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "AoC2024"
   "AoC2024.pdb"
-  "CMakeFiles/AoC2024.dir/day6.cpp.o"
-  "CMakeFiles/AoC2024.dir/day6.cpp.o.d"
+  "CMakeFiles/AoC2024.dir/day9.cpp.o"
+  "CMakeFiles/AoC2024.dir/day9.cpp.o.d"
   "CMakeFiles/AoC2024.dir/utils.cpp.o"
   "CMakeFiles/AoC2024.dir/utils.cpp.o.d"
 )

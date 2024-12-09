@@ -129,29 +129,29 @@ AoC2024/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/build
 .PHONY : AoC2024/fast
 
-day6.o: day6.cpp.o
-.PHONY : day6.o
+day9.o: day9.cpp.o
+.PHONY : day9.o
 
 # target to build an object file
-day6.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day6.cpp.o
-.PHONY : day6.cpp.o
+day9.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.o
+.PHONY : day9.cpp.o
 
-day6.i: day6.cpp.i
-.PHONY : day6.i
+day9.i: day9.cpp.i
+.PHONY : day9.i
 
 # target to preprocess a source file
-day6.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day6.cpp.i
-.PHONY : day6.cpp.i
+day9.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.i
+.PHONY : day9.cpp.i
 
-day6.s: day6.cpp.s
-.PHONY : day6.s
+day9.s: day9.cpp.s
+.PHONY : day9.s
 
 # target to generate assembly for a file
-day6.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day6.cpp.s
-.PHONY : day6.cpp.s
+day9.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.s
+.PHONY : day9.cpp.s
 
 utils.o: utils.cpp.o
 .PHONY : utils.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AoC2024"
-	@echo "... day6.o"
-	@echo "... day6.i"
-	@echo "... day6.s"
+	@echo "... day9.o"
+	@echo "... day9.i"
+	@echo "... day9.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
