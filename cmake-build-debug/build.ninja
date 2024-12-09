@@ -64,22 +64,22 @@ build CMakeFiles/AoC2024.dir/utils.cpp.o: CXX_COMPILER__AoC2024_scanned_Debug /h
   OBJECT_FILE_DIR = CMakeFiles/AoC2024.dir
   dyndep = CMakeFiles/AoC2024.dir/CXX.dd
 
-build CMakeFiles/AoC2024.dir/day9.cpp.o.ddi: CXX_SCAN__AoC2024_Debug /home/nicola/Desktop/AoC2024/day9.cpp || cmake_object_order_depends_target_AoC2024
-  DEP_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o.ddi
+build CMakeFiles/AoC2024.dir/day7.cpp.o.ddi: CXX_SCAN__AoC2024_Debug /home/nicola/Desktop/AoC2024/day7.cpp || cmake_object_order_depends_target_AoC2024
+  DEP_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o.ddi
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJ_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o.ddi.i
+  OBJ_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o.ddi.i
 
-build CMakeFiles/AoC2024.dir/day9.cpp.o: CXX_COMPILER__AoC2024_scanned_Debug /home/nicola/Desktop/AoC2024/day9.cpp | CMakeFiles/AoC2024.dir/day9.cpp.o.modmap || cmake_object_order_depends_target_AoC2024 CMakeFiles/AoC2024.dir/CXX.dd
-  DEP_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/AoC2024.dir/day9.cpp.o.modmap
+build CMakeFiles/AoC2024.dir/day7.cpp.o: CXX_COMPILER__AoC2024_scanned_Debug /home/nicola/Desktop/AoC2024/day7.cpp | CMakeFiles/AoC2024.dir/day7.cpp.o.modmap || cmake_object_order_depends_target_AoC2024 CMakeFiles/AoC2024.dir/CXX.dd
+  DEP_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/AoC2024.dir/day7.cpp.o.modmap
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AoC2024.dir
   OBJECT_FILE_DIR = CMakeFiles/AoC2024.dir
   dyndep = CMakeFiles/AoC2024.dir/CXX.dd
 
-build CMakeFiles/AoC2024.dir/CXX.dd | /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/AoC2024.dir/CXXModules.json CMakeFiles/AoC2024.dir/utils.cpp.o.modmap CMakeFiles/AoC2024.dir/day9.cpp.o.modmap: CXX_DYNDEP__AoC2024_Debug CMakeFiles/AoC2024.dir/utils.cpp.o.ddi CMakeFiles/AoC2024.dir/day9.cpp.o.ddi | /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/AoC2024.dir/CXXDependInfo.json
+build CMakeFiles/AoC2024.dir/CXX.dd | /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/AoC2024.dir/CXXModules.json CMakeFiles/AoC2024.dir/utils.cpp.o.modmap CMakeFiles/AoC2024.dir/day7.cpp.o.modmap: CXX_DYNDEP__AoC2024_Debug CMakeFiles/AoC2024.dir/utils.cpp.o.ddi CMakeFiles/AoC2024.dir/day7.cpp.o.ddi | /home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/AoC2024.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -89,7 +89,7 @@ build CMakeFiles/AoC2024.dir/CXX.dd | /home/nicola/Desktop/AoC2024/cmake-build-d
 #############################################
 # Link the executable AoC2024
 
-build AoC2024: CXX_EXECUTABLE_LINKER__AoC2024_Debug CMakeFiles/AoC2024.dir/utils.cpp.o CMakeFiles/AoC2024.dir/day9.cpp.o
+build AoC2024: CXX_EXECUTABLE_LINKER__AoC2024_Debug CMakeFiles/AoC2024.dir/utils.cpp.o CMakeFiles/AoC2024.dir/day7.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/AoC2024.dir
   POST_BUILD = :

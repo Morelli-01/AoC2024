@@ -157,6 +157,5 @@ void riddle9_2(string file_name) {
 int main(void) {
     riddle9_1("/home/nicola/Desktop/AoC2024/input_files/day9_1.txt");
     riddle9_2("/home/nicola/Desktop/AoC2024/input_files/day9_1.txt");
-
     return EXIT_SUCCESS;
 }

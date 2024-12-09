@@ -14,6 +14,6 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(AoC2024
         utils.cpp
         utils.h
-        day9.cpp)
+        day7.cpp)
 
 #target_link_libraries(AoC2024 ${MPI_C_LIBRARIES})
