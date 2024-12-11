@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
 
-CXX_FLAGS =  -O3 -fopenmp -g -std=gnu++23 -fdiagnostics-color=always
+CXX_FLAGS =  -fopenmp -g -std=gnu++23 -fdiagnostics-color=always
 
