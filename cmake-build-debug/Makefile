@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/305/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/308/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/305/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/308/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/nicola/Desktop/AoC2024/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/snap/clion/305/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/308/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/clion/305/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/308/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -129,29 +129,29 @@ AoC2024/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/build
 .PHONY : AoC2024/fast
 
-day9.o: day9.cpp.o
-.PHONY : day9.o
+day11.o: day11.cpp.o
+.PHONY : day11.o
 
 # target to build an object file
-day9.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.o
-.PHONY : day9.cpp.o
+day11.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day11.cpp.o
+.PHONY : day11.cpp.o
 
-day9.i: day9.cpp.i
-.PHONY : day9.i
+day11.i: day11.cpp.i
+.PHONY : day11.i
 
 # target to preprocess a source file
-day9.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.i
-.PHONY : day9.cpp.i
+day11.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day11.cpp.i
+.PHONY : day11.cpp.i
 
-day9.s: day9.cpp.s
-.PHONY : day9.s
+day11.s: day11.cpp.s
+.PHONY : day11.s
 
 # target to generate assembly for a file
-day9.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day9.cpp.s
-.PHONY : day9.cpp.s
+day11.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AoC2024.dir/build.make CMakeFiles/AoC2024.dir/day11.cpp.s
+.PHONY : day11.cpp.s
 
 utils.o: utils.cpp.o
 .PHONY : utils.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AoC2024"
-	@echo "... day9.o"
-	@echo "... day9.i"
-	@echo "... day9.s"
+	@echo "... day11.o"
+	@echo "... day11.i"
+	@echo "... day11.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"
