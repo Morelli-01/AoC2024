@@ -1,0 +1,22 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/nicola/Desktop/AoC2024/cmake-build-debug",
+	"dir-cur-src" : "/home/nicola/Desktop/AoC2024",
+	"dir-top-bld" : "/home/nicola/Desktop/AoC2024/cmake-build-debug",
+	"dir-top-src" : "/home/nicola/Desktop/AoC2024",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/usr/lib/x86_64-linux-gnu/openmpi/include",
+		"/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/nicola/Desktop/AoC2024/cmake-build-debug/CMakeFiles/AoC2024.dir"
+}
