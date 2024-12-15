@@ -41,21 +41,22 @@ void riddle11_1(string file_name) {
 }
 
 
-void split_rule_parallel_bruteforce(size_t &&v, size_t start_idx, size_t *result) {
+void split_rule_parallel_bruteforce(size_t &&v, size_t start_idx, size_t *result, uint8_t n_blinks_) {
     string tmpStr{};
-    for (int i = start_idx; i < N_BLINKS; ++i) {
+    for (int i = start_idx; i < n_blinks_; ++i) {
         if (v == 0) v = 1;
         else if ((tmpStr = to_string(v)).size() % 2 == 0) {
             v = stoi(tmpStr.substr(0, (tmpStr.size()) / 2));
 #pragma omp task
-            split_rule_parallel_bruteforce(stoi(tmpStr.substr(tmpStr.size() / 2, tmpStr.size() / 2)), i + 1, result);
+            split_rule_parallel_bruteforce(stoi(tmpStr.substr(tmpStr.size() / 2, tmpStr.size() / 2)), i + 1, result,
+                                           n_blinks_);
         } else v *= 2024;
     }
 #pragma omp atomic
     (*result)++;
 }
 
-void riddle11_2_bruteforce(string file_name) {
+void riddle11_2_bruteforce(string file_name, uint8_t n_blinks_) {
 
     ifstream is(file_name);
     vector<size_t> v{};
@@ -71,11 +72,11 @@ void riddle11_2_bruteforce(string file_name) {
 #pragma omp parallel master
     for (int i = 0; i < v.size(); ++i)
 #pragma omp task
-            split_rule_parallel_bruteforce(move(v[i]), 0, &result);
+            split_rule_parallel_bruteforce(move(v[i]), 0, &result, n_blinks_);
 
 #pragma omp taskwait
 
-    cout << "The solution of riddle11_2 is: " << result << endl;
+//    cout << "The solution of riddle11_2 is: " << result << endl;
 }
 
 void blink_rule(map<size_t, size_t> &m_) {
@@ -126,13 +127,18 @@ void riddle11_2(string file_name) {
 
 int main(void) {
     Timer t("general");
-//    t.start("riddle11_1");
-//    riddle11_1("/home/nicola/Desktop/AoC2024/input_files/day11_1.txt");
-//    t.stop();
-
+    t.start("riddle11_1");
+    riddle11_1("/home/nicola/Desktop/AoC2024/input_files/day11_1.txt");
+    t.stop();
     t.start("riddle11_2");
     riddle11_2("/home/nicola/Desktop/AoC2024/input_files/day11_1.txt");
     t.stop();
+
+//    for (int i = 1; i < 75; ++i) {
+//        t.start("riddle11_2_" + to_string(i));
+//        riddle11_2_bruteforce("/home/nicola/Desktop/AoC2024/input_files/day11_1.txt", i);
+//        cout << t.get_elapsed() << endl;
+//    }
 
     return EXIT_SUCCESS;
 }

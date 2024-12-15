@@ -33,6 +33,8 @@ struct Timer {
 
     void stop();
 
+    double get_elapsed();
+
     void stop_flops(float flops);
 };
 
@@ -81,6 +83,32 @@ struct Mat {
         }
 
         return cpy;
+    }
+
+    void add_padding(int pad) {
+
+        vector<T> new_data((rows_ + 2 * pad) * (cols_ + 2 * pad), 0);
+        for (int r = 0; r < rows_; ++r) {
+            for (int c = 0; c < cols_; ++c) {
+                new_data[(r + pad) * (cols_ + 2 * pad) + (c + pad)] = data_[r * cols_ + c];
+            }
+        }
+        rows_ += pad * 2;
+        cols_ += pad * 2;
+        data_ = new_data;
+    }
+
+    void add_padding(int pad, T fill_data) {
+
+        vector<T> new_data((rows_ + 2 * pad) * (cols_ + 2 * pad), fill_data);
+        for (int r = 0; r < rows_; ++r) {
+            for (int c = 0; c < cols_; ++c) {
+                new_data[(r + pad) * (cols_ + 2 * pad) + (c + pad)] = data_[r * cols_ + c];
+            }
+        }
+        rows_ += pad * 2;
+        cols_ += pad * 2;
+        data_ = new_data;
     }
 };
 

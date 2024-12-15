@@ -14,6 +14,6 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pg")
 add_executable(AoC2024
         utils.cpp
         utils.h
-        day11.cpp)
+        day12.cpp)
 
 target_link_libraries(AoC2024 ${MPI_C_LIBRARIES})

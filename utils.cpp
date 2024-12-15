@@ -21,6 +21,12 @@ void Timer::stop() {
     cout << "Elapsed time for " << task_name_ << ": " << (elapsed_ms.count()) << " sec" << endl;
 }
 
+double Timer::get_elapsed() {
+    stop_ = steady_clock::now();
+    duration<double> elapsed_ms = stop_ - start_;
+    return elapsed_ms.count();
+}
+
 void Timer::stop_flops(float flops) {
     stop_ = steady_clock::now();
     duration<double> elapsed_ms = stop_ - start_;
