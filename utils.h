@@ -16,6 +16,7 @@
 #include "map"
 #include "chrono"
 #include "algorithm"
+#include "set"
 
 using namespace std;
 using namespace chrono;
@@ -79,14 +80,12 @@ struct Mat {
         Mat<T> cpy(rows_, cols_);
         for (int i = 0; i < data_.size(); ++i) {
             cpy.data_[i] = data_[i];
-
         }
 
         return cpy;
     }
 
     void add_padding(int pad) {
-
         vector<T> new_data((rows_ + 2 * pad) * (cols_ + 2 * pad), 0);
         for (int r = 0; r < rows_; ++r) {
             for (int c = 0; c < cols_; ++c) {
@@ -99,7 +98,6 @@ struct Mat {
     }
 
     void add_padding(int pad, T fill_data) {
-
         vector<T> new_data((rows_ + 2 * pad) * (cols_ + 2 * pad), fill_data);
         for (int r = 0; r < rows_; ++r) {
             for (int c = 0; c < cols_; ++c) {
