@@ -6,18 +6,6 @@
 
 using crd = pair<int, int>;
 
-template<typename T>
-void print(Mat<T> &m) {
-    cout << "[" << m.rows_ << "," << m.cols_ << "]\n";
-    for (int r = 0; r < m.rows_; ++r) {
-        for (int c = 0; c < m.cols_; ++c) {
-            cout << m[r, c];
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
-
 void move_(Mat<uint8_t> &grid, uint8_t move, crd &robot_pos, map<char, crd> &rules) {
     const auto [dy, dx] = rules[move];
     const auto [y, x] = robot_pos;
@@ -207,7 +195,6 @@ void riddle15_2(const string &file_name) {
     }
     cout << "The solution to riddle15_1 is: " << result << endl;
 }
-
 
 int main(void) {
     riddle15_1("/home/nicola/Desktop/AoC2024/input_files/day15_1.txt");

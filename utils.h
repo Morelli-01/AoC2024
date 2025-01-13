@@ -17,6 +17,8 @@
 #include "chrono"
 #include "algorithm"
 #include "set"
+#include "queue"
+#include "array"
 
 using namespace std;
 using namespace chrono;
@@ -109,5 +111,17 @@ struct Mat {
         data_ = new_data;
     }
 };
+
+template<typename T>
+void print(Mat<T> &m) {
+    cout << "[" << m.rows_ << "," << m.cols_ << "]\n";
+    for (int r = 0; r < m.rows_; ++r) {
+        for (int c = 0; c < m.cols_; ++c) {
+            cout << m[r, c] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
 
 #endif //AOC2024_UTILS_H
